@@ -1,0 +1,39 @@
+import org.junit.jupiter.api.Assertions;
+
+public class BankTest {
+    public int take()
+    {
+        Bank b=new Bank();
+        b.Withdraw(5500);
+        Assertions.assertEquals(4500,4500);
+    }
+}
+
+
+import javax.net.ssl.ExtendedSSLSession;
+class InsufficientFundExceeption extends Exception{
+    InsufficientFundExceeption(String msg)
+    {
+        super(msg);
+    }
+}
+
+public class Bank {
+    public int Withdraw(int a)
+    {
+        int with=a;
+        int bal=10000;
+        if(bal<a)
+        {
+            String msg;
+            throw new InsufficientFundExceeption(msg);
+        }
+        else
+        {
+            int c;
+            c=bal-with;
+            return c;
+        }
+
+    }
+}
